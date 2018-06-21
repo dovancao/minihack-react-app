@@ -6,7 +6,7 @@ class AddRound extends Component {
       let newScore = this.props.scores;
       newScore.push([0,0,0,0]);
       this.props._addNewRow(newScore);
-    }
+    };
   render() {
 
     return (

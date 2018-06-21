@@ -1,0 +1,5 @@
+.inValid:after {
+    content: 'Total score of this round have to equal 0';
+    color: red;
+    padding-top: 20px;
+}

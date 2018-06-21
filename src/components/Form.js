@@ -3,21 +3,19 @@ import React, { Component } from 'react';
 class Form extends Component {
     state = {
         playerNames: ["","","",""]
-    }
+    };
     
     _changePage = () => {
-        console.log(this.state.playerNames);
         this.props.startPlaying(this.state.playerNames);
-    }
+    };
 
     _onNameChange = (id, text) => {
-        console.log(text);
-        var newPlayerNames = [...this.state.playerNames];
+        let newPlayerNames = [...this.state.playerNames];
         newPlayerNames[id] = text;
         this.setState({
             playerNames: newPlayerNames
         });
-    }
+    };
     // value={this.state.playerNames[0]}
     render() {
         return (

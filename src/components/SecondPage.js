@@ -1,27 +1,27 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Header from './HeaderFirstPage';
 import Table from './Table';
 import AddRound from './AddRound';
 
 class SecondPage extends Component {
 
-  state= {
-    scores: []
-  }
+	state = {
+		scores: []
+	};
 
-  _changeScores = (scores) => this.setState({scores: scores});
-  _addNewRow = (newScore) => this.setState({scores: newScore});
+	_changeScores = (scores) => this.setState({scores: scores});
 
-  render() {
+	_addNewRow = (newScore) => this.setState({scores: newScore});
 
-    return (
-      <div className="container">
-        <Header />
-        <Table players ={this.props.players} changeScore ={this._changeScores} scores = {this.state.scores} />
-        <AddRound _addNewRow ={this._addNewRow} scores = {this.state.scores}/>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="container">
+				<Header/>
+				<Table players={this.props.players} changeScore={this._changeScores} scores={this.state.scores}/>
+				<AddRound _addNewRow={this._addNewRow} scores={this.state.scores}/>
+			</div>
+		);
+	}
 }
 
 export default SecondPage;

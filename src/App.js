@@ -10,7 +10,7 @@ class App extends Component {
   state = {
     isPlaying: false,
     players: [],
-  }
+  };
 
   _startPlaying = (players) => this.setState({ isPlaying: true, players: players }); 
 
